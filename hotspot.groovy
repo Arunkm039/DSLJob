@@ -14,7 +14,7 @@ multibranchPipelineJob("hotspot/compute-engine/dev-qa/${jobName}") {
 
         github {
             id("${credentials}")
-            apiUri("https://github.developer.allianz.io/api/v3")
+            apiUri("https://api.github.com")
             scanCredentialsId("${credentials}")
             repoOwner("${org}")
             repository("${repo}")
