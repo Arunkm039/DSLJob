@@ -7,21 +7,6 @@ pipelineJob('hotspot/build-hotspot-bkservice') {
 			name ("ENV")
 			description ("Choose target environment")
 			choices (['dev', 'qa', 'int'])
-		}
-
-		gitParameterDefinition {
-			name("GIT_BRANCH_TAG")
-			description("Available git branches")
-			type("PT_BRANCH_TAG")
-			defaultValue("")
-			branch("*")
-			branchFilter(".*")
-			tagFilter("*")
-			sortMode("DESCENDING_SMART")
-			selectedValue("DEFAULT")
-			useRepository("DevOpsTest.git")
-			quickFilterEnabled(true)
-			listSize("0")
 		}		
 
 		choiceParam {
