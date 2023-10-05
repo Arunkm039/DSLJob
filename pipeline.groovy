@@ -9,6 +9,21 @@ pipelineJob('hotspot/build-hotspot-bkservice') {
 			choices (['dev', 'qa', 'int'])
 		}
 
+		gitParameter {
+			name("GIT_BRANCH_TAG")
+			description("Available git branches")
+			type("PT_BRANCH_TAG")
+			defaultValue("")
+			branch("*")
+			branchFilter(".*")
+			tagFilter("*")
+			sortMode("DESCENDING_SMART")
+			selectedValue("DEFAULT")
+			useRepository("hotspot-backend-services.git")
+			quickFilterEnabled(true)
+			listSize("0")
+		}		
+
 		choiceParam {
 			name ("COMPONENT")
 			description("Choose component")
