@@ -8,28 +8,7 @@ def jenkinsfilePath = 'Jenkinsfile'
 
 multibranchPipelineJob("hotspot/compute-engine/dev-qa/${jobName}") {
 
-    displayName("${jobDisplayName} DEV QA Build")
-
-    parameters {
-		choiceParam {
-			name ("ENV")
-			description ("Choose target environment")
-			choices (['dev', 'qa', 'int'])
-		}		
-
-		choiceParam {
-			name ("COMPONENT")
-			description("Choose component")
-			choices (['scheduler', 'worker', 'manager', 'model-worker'])
-		}
-
-		choiceParam {
-			name ("NAMESPACE")
-			description ("Choose namespace")
-			choices (['ctad-dev-amp-core', 'ctad-qa-amp-core', 'ctad-int-amp-core'])
-		}
-
-	}
+    displayName("${jobDisplayName} DEV QA Build")    
 
     branchSources {
 
