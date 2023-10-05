@@ -9,7 +9,7 @@ pipelineJob('hotspot/build-hotspot-bkservice') {
 			choices (['dev', 'qa', 'int'])
 		}
 
-		gitParameter {
+		gitParameterDefinition {
 			name("GIT_BRANCH_TAG")
 			description("Available git branches")
 			type("PT_BRANCH_TAG")
