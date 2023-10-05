@@ -19,7 +19,7 @@ pipelineJob('hotspot/build-hotspot-bkservice') {
 			tagFilter("*")
 			sortMode("DESCENDING_SMART")
 			selectedValue("DEFAULT")
-			useRepository("hotspot-backend-services.git")
+			useRepository("DevOpsTest.git")
 			quickFilterEnabled(true)
 			listSize("0")
 		}		
