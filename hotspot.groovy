@@ -33,6 +33,11 @@ multibranchPipelineJob("hotspot/compute-engine/dev-qa/${jobName}") {
         }
     }
 
+    triggers {
+    	cron('H/5 * * * *')
+       }
+	
+
     orphanedItemStrategy {
         discardOldItems {
             numToKeep(5)
