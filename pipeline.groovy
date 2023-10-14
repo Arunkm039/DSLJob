@@ -1,6 +1,14 @@
 pipelineJob('hotspot/build-hotspot-bkservice') { 
 	displayName("Build Hotspot Services (JDK8)")
-	description("Hotspot Services builder pipeline")	
+	description("Hotspot Services builder pipeline")
+
+	parameters {
+		choiceParam {
+			name ("ENV")
+			description ("Choose target environment")
+			choices (['dev', 'qa', 'int'])
+		}
+	}	
 
 	definition{
 		cpsScm {
