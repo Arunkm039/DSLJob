@@ -8,14 +8,8 @@ pipelineJob('hotspot/build-hotspot-bkservice') {
 			name ("ENV")
 			description ("Choose target environment")
 			choices (['dev', 'qa', 'int'])
-		}		
-
-		choiceParam {
-			name ("DEPLOYMENT")
-			description("Choose component")
-			choices ([])
 		}
-
+		
 		choiceParam {
 			name ("NAMESPACE")
 			description ("Choose namespace")
