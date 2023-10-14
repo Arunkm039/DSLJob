@@ -2,14 +2,40 @@ pipelineJob('hotspot/build-hotspot-bkservice') {
 	displayName("Build Hotspot Services (JDK8)")
 	description("Hotspot Services builder pipeline")
 
+		
 	parameters {
-        choice(name: 'ENV', choices: ['dev', 'qa', 'int'], description: 'Choose target environment')
-        choice(name: 'NAMESPACE', choices: ['ctad-dev-amp-core', 'ctad-qa-amp-core', 'ctad-int-amp-core'], description: 'Choose namespace')
-        choice(name: 'ACTION', choices: ['Scale Up', 'Scale Down'], description: 'Choose scaling action')
-        // This choice will be dynamically populated later based on the chosen environment
-        choice(name: 'DEPLOYMENT', choices: [], description: 'Choose deployment to scale')
-        string(name: 'REPLICAS', defaultValue: '1', description: 'Replica count for scaling up')
-    }	
+		choiceParam {
+			name ("ENV")
+			description ("Choose target environment")
+			choices (['dev', 'qa', 'int'])
+		}		
+
+		choiceParam {
+			name ("DEPLOYMENT")
+			description("Choose component")
+			choices ([])
+		}
+
+		choiceParam {
+			name ("NAMESPACE")
+			description ("Choose namespace")
+			choices (['ctad-dev-amp-core', 'ctad-qa-amp-core', 'ctad-int-amp-core'])
+		}
+
+		choiceParam {
+			name ("ACTION")
+			description ("Choose action")
+			choices (['Scale Up', 'Scale Down'])
+		}
+
+		stringParam {
+			name ("REPLICAS")
+			description ("Choose replica count")
+			defaultValue ('1')
+			choices (['dev', 'qa', 'int'])
+		}
+
+	}
 
 	definition{
 		cpsScm {
