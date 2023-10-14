@@ -31,8 +31,7 @@ pipelineJob('hotspot/build-hotspot-bkservice') {
 		stringParam {
 			name ("REPLICAS")
 			description ("Choose replica count")
-			defaultValue ('1')
-			choices (['dev', 'qa', 'int'])
+			defaultValue ('1')			
 		}
 
 	}
