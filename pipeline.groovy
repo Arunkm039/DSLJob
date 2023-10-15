@@ -31,7 +31,7 @@ pipelineJob('hotspot/build-hotspot-bkservice') {
 		stringParam {
 			name ("DEPLOYMENT")
 			description ("Choose replica count")
-			defaultValue ('1')
+			defaultValue ('')
 			description ("Choose deployment. Dev: [hotspot-api-dask-scheduler, hotspot-api-worker], QA: [hotspot-mq-scheduler, hotspot-mqworker-maxaccumulation], Int: [hotspot-mqworker-scenario, hotspot-mqworker-visualization]")
 		}
 
