@@ -45,7 +45,7 @@ pipelineJob('hotspot/build-hotspot-bkservice') {
 		choiceParam {
 		    name ("DEPLOYMENT_INT")
 		    description ("Choose deployment for Int environment")
-		    choices (['hotspot-mqworker-scenario', 'hotspot-mqworker-visualization', 'int-worker])
+		    choices (['hotspot-mqworker-scenario', 'hotspot-mqworker-visualization', 'int-worker'])
 		}
 
 
