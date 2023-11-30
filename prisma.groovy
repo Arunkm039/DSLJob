@@ -13,7 +13,7 @@ pipelineJob('cta/prismascan-crui-services') {
                         credentials('Github')
                         url('https://github.com/Arunkm039/DevOpsTest.git')
                     }
-                    scriptPath(Jenkinsfile.prismascan")
+                    scriptPath("Jenkinsfile.prismascan")
                 }
             }
         }
